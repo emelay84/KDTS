@@ -45,6 +45,9 @@ def fit_classifier():
 
 
 def create_classifier(classifier_name, input_shape, nb_classes, output_directory, verbose=False):
+    if classifier_name == 'studentAlone':
+        from classifiers import fcn
+        return fcn.Classifier_STUDENTALONE(output_directory, input_shape, nb_classes, verbose)    
     if classifier_name == 'fcn':
         from classifiers import fcn
         return fcn.Classifier_FCN(output_directory, input_shape, nb_classes, verbose)
