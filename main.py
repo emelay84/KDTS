@@ -47,7 +47,7 @@ def fit_classifier():
 def create_classifier(classifier_name, input_shape, nb_classes, output_directory, verbose=False):
     if classifier_name == 'student':
         from classifiers import student
-        return sutdent.Classifier_STUDENT(output_directory, input_shape, nb_classes, verbose)
+        return student.Classifier_STUDENT(output_directory, input_shape, nb_classes, verbose)
         
     if classifier_name == 'studentAlone':
         from classifiers import studentAlone
