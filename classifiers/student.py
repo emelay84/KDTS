@@ -10,7 +10,6 @@ from utils.utils import save_logs
 from utils.utils import calculate_metrics
 from distiller import Distiller
 
-
 class Classifier_STUDENT:
 
   def __init__(self, output_directory, input_shape, nb_classes, verbose=False,build=True):
@@ -58,8 +57,8 @@ class Classifier_STUDENT:
 
     self.callbacks = [reduce_lr,model_checkpoint]
 
-    teacher = keras.models.load_model(self.output_directory+'best_model.hdf5')
-        
+    teacher = keras.models.load_model('/content/drive/MyDrive/results/fcn/UCRArchive_2018_itr_1/Coffee/best_model.hdf5')
+
     # Initialize and compile distiller
     distiller = Distiller(student=student, teacher=teacher)
     distiller.compile(
