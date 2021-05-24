@@ -158,7 +158,7 @@ def read_all_datasets(root_dir, archive_name, split_val=False):
 
             datasets_dict[dataset_name] = (x_train.copy(), y_train.copy(), x_test.copy(),
                                            y_test.copy())
-
+            print(x_train)
     else:
         for dataset_name in DATASET_NAMES:
             root_dir_dataset = cur_root_dir + '/' + archive_name + '/' + dataset_name + '/'
